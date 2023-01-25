@@ -100,6 +100,17 @@ This is a great resource for seeing if your variant has been observed before acr
 
 
 
+You can query gnomad using SAMTOOLS-style regions. Here's an example:
+<img align="center" width="600" src="images/example_query.png">
+
+
+This will show you the small variants (SNVs, indels, and MNPs in your region).
+To look at the SVs, switch to the SV tab at the top right of the page:
+
+<img align="center" width="600" src="images/get_svs.jpeg">
+
+
+
 # Looking for common variants in dbVar
 
 The file `supporting_variants_for_nstd186.NCBI_curated_common_SVs.csv` contains common variants from the 
