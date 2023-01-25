@@ -107,7 +107,7 @@ You can query gnomad using SAMTOOLS-style regions. Here's an example:
 This will show you the small variants (SNVs, indels, and MNPs in your region).
 To look at the SVs, switch to the SV tab at the top right of the page:
 
-<img align="center" width="600" src="images/get_svs.jpeg">
+<img align="center" width="600" src="images/get_svs.png">
 
 
 
