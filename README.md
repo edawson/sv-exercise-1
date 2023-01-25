@@ -5,11 +5,11 @@ Filtering structural variants in a long read human trio dataset
 
 # Getting our data
 
-Reference:
+Reference: hg38 (Homo_sapiens_assembly38.fasta) (public link [here](https://r2-public-worker.atacama.workers.dev/references/Homo_sapiens_assembly38.fasta.tar)). Note that you may already have this available on your machine / cluster.
 
-VCF:
+VCF: A small VCF called using PBSV on HiFi reads in HG001, HG002, and HG003. Available [here](https://raw.githubusercontent.com/edawson/sv-exercise-1/main/GIAB_Trio.sample.vcf)
 
-PED file:
+PED file: A standard PED file defining the trio relationship. Available [here](https://raw.githubusercontent.com/edawson/sv-exercise-1/main/family.ped)
 
 # Initial assessment
 
@@ -110,6 +110,32 @@ To look at the SVs, switch to the SV tab at the top right of the page:
 <img align="center" width="600" src="images/get_svs.png">
 
 
+If you scroll down, you can see what SVs are associated with these regions.
+
+- Looking at our MIEs, have these been observed in other samples before?
+- You can click into details about the variants. What are some things of note?
+
+
+## Looking for cancer gene fusions in COSMIC
+
+Sometimes, we are interested in specific genes and whether they are impacted by structural variants.
+
+Let's examine a common cancer gene: *RET*, which has been observed to be a driver in thyroid and other cancers.
+
+### Looking for fusions in COSMIC
+
+COSMIC maintains a list (but not an exhaustive one) of gene fusions observed in cancer here: [https://cancer.sanger.ac.uk/cosmic/fusion](https://cancer.sanger.ac.uk/cosmic/fusion).
+
+Let's search for the *RET* gene. How many times has this gene been observed to fuse with other genes?
+ - What kind of SVs are associated with the RET-CCDC6 fusion? **HINT**: you might need to google this.
+
+
+- Look up another gene of interest (some good suggestions include: *BCR*, *NTRK1*, and *ALK*). Write a short report
+on this gene and talk about the SVs observed in this gene.
+
+
+<div style="page-break-after: always;"></div>
+
 
 # Looking for common variants in dbVar
 
@@ -176,3 +202,4 @@ We need to convert our VCF to BED, since the SV VCF produced by PBSV is not very
 ```bash
 grep -v "^#" putative_mies.vcf | cut -f 1,2,8 | grep -o ".*END=[0-9]*" | sed "s/END=//g" > putative_mies.bed
 ```
+
