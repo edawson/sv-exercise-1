@@ -96,7 +96,7 @@ that were processed through a single pipeline, with the aggregate variation made
 This is a great resource for seeing if your variant has been observed before across many samples.
 
 
-<img align="center" width="600" height="600" src="images/gnomad.png">
+<img align="center" width="600" src="images/gnomad.png">
 
 
 
