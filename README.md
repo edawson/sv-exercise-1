@@ -3,6 +3,12 @@ Filtering structural variants in a long read human trio dataset
 
 # Overview
 
+This is a broad exercise intended to teach how to explore structural variant VCFs, work with germline and somatic SV / gene fusion
+databases, and get some practice using BASH commands to manipulate and annotate structural variant VCFs.
+
+It is expected that you won't do everything in this exercise! Instead, focus on getting through the first sections
+on getting the data and filtering it, then expanding on the exercise to ask your own interesting question.
+
 # Getting our data
 
 Reference: hg38 (Homo_sapiens_assembly38.fasta) (public link [here](https://r2-public-worker.atacama.workers.dev/references/Homo_sapiens_assembly38.fasta.tar)). Note that you may already have this available on your machine / cluster.
